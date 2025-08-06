@@ -1,1 +1,1 @@
-复现pathcore + 详细的中文注释
+复现pathcore + 中文注释
