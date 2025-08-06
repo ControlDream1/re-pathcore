@@ -1,4 +1,3 @@
-"""PatchCore and PatchCore detection methods."""
 import logging
 import os
 import pickle
@@ -18,7 +17,7 @@ LOGGER = logging.getLogger(__name__)
 
 class PatchCore(torch.nn.Module):
     def __init__(self, device):
-        """PatchCore anomaly detection class."""
+        
         super(PatchCore, self).__init__()
         self.device = device
 
@@ -89,7 +88,7 @@ class PatchCore(torch.nn.Module):
         return self._embed(data)
 
     def _embed(self, images, detach=True, provide_patch_shapes=False):
-        """Returns feature embeddings for images."""    
+          
 
         def _detach(features):
             if detach:
@@ -349,7 +348,7 @@ class PatchCore(torch.nn.Module):
         self.anomaly_scorer.load(load_path, prepend)
 
 
-# Image handling classes.
+
 class PatchMaker:
     def __init__(self, patchsize, stride=None):
         self.patchsize = patchsize
